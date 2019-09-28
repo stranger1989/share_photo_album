@@ -11,6 +11,18 @@
   "plugins": ["@typescript-eslint", "react", "react-hooks", "jest", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {},
+  // ignore import/no-unresolved ESLint Errors
+  "root": true,
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", "jsx", ".ts", ".tsx"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
   "env": {
     "browser": true,
     "es6": true,
