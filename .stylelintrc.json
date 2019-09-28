@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": ["**/node_modules/**"],
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "single",
+    "no-empty-source": null
+  }
+}
