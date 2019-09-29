@@ -46,6 +46,27 @@
         "tsx": "never"
       }
     ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          ".storybook/**",
+          "stories/**",
+          "**/*/*.story.*",
+          "**/*/*.stories.*",
+          "**/__specs__/**",
+          "**/*/*.spec.*",
+          "**/__tests__/**",
+          "**/*/*.test.*",
+          "src/setupTests.*"
+        ]
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": "off",
+    "react/prefer-stateless-function": "off",
     "import/prefer-default-export": "off",
 
     // prettier

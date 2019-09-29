@@ -21,7 +21,11 @@ const appLink = css`
   color: #09d3ac;
 `;
 
-const App: React.FC = () => {
+export interface AppProps {
+  text: string;
+}
+
+const App: React.FC<AppProps> = ({ text }) => {
   return (
     <div css={app}>
       <header css={appHeader}>
@@ -29,7 +33,7 @@ const App: React.FC = () => {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a css={appLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
+          {text}
         </a>
       </header>
     </div>

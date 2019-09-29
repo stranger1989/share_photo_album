@@ -14,8 +14,10 @@ import App from '../components/App';
 //   };
 // };
 
+const text = 'text message is ...';
+
 const AppContainer: FC = () => {
-  return <App />;
+  return <App text={text} />;
 };
 
 export default connect()(AppContainer);
