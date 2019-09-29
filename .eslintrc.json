@@ -9,6 +9,13 @@
     "prettier/react"
   ],
   "plugins": ["@typescript-eslint", "react", "react-hooks", "jest", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "cy": "readonly",
+    "Cypress": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": true
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {},
   // ignore import/no-unresolved ESLint Errors

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ./App ./App 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="css-1og1vvo-App"
+    >
+      <header
+        className="css-t35jp5-App"
+      >
+        <p>
+          Edit 
+          <code>
+            src/App.tsx
+          </code>
+           and save to reload.
+        </p>
+        <a
+          className="css-1ohdzf6-App"
+          href="https://reactjs.org"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          text
+        </a>
+      </header>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
