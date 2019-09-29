@@ -1,0 +1,19 @@
+name: Cypress Testing
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
+jobs:
+  container-job:
+    name: Cypress Testing
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn install
+      - run: CI=true yarn test
+      - run: npm install forever -g
+      - run: forever start -c "yarn start" ./
+      - run: yarn cypress:run --spec "cypress/integration/app.spec.ts"
