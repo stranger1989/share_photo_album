@@ -5,6 +5,9 @@ import store from './store/configureStore';
 import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
+import { amplifyConfig } from './constants/Auth';
+
+amplifyConfig();
 
 ReactDOM.render(
   <Provider store={store}>
