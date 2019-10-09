@@ -26,9 +26,24 @@ const amplifyAuthReducer: Reducer = (state: AuthState = initialState, action: an
         ...state,
         isLoading: false,
         isError: false,
-        user: action.payload.user,
+        user: action.payload.result.user,
       };
     case AuthActionType.FETCH_SESSION_FAIL:
+      return { ...state, isLoading: false, isError: true };
+    case AuthActionType.FETCH_SIGNOUT_START:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case AuthActionType.FETCH_SIGNOUT_SUCCEED:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        user: null,
+      };
+    case AuthActionType.FETCH_SIGNOUT_FAIL:
       return { ...state, isLoading: false, isError: true };
     case AuthActionType.AUTH_INITIALIZE:
       return { ...state, user: null };

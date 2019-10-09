@@ -21,13 +21,12 @@ export const fetchSessionData = (isMounted: boolean): any => {
   }
 };
 
-export const handleSignout = (): void => {
-  const uniqueLogicFunc: Function = async (): Promise<object> => {
-    const data = await Auth.signOut();
-
-    return { user: data };
+export const handleSignout = (): any => {
+  const uniqueLogicFunc: Function = async () => {
+    Auth.signOut();
   };
-  apiRequestFunc(
+
+  return apiRequestFunc(
     AuthActionType.FETCH_SIGNOUT_START,
     AuthActionType.FETCH_SIGNOUT_SUCCEED,
     AuthActionType.FETCH_SIGNOUT_FAIL,
