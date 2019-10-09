@@ -6,6 +6,7 @@ import { Authenticator } from 'aws-amplify-react';
 
 import * as AuthActions from '../actions/Auth';
 import App from '../components/App';
+import Header from './Header';
 
 const mapStateToProps = (state: any): any => ({
   auth: state.auth,
@@ -52,7 +53,18 @@ const AppContainer: FC<any> = ({ auth, authActions }) => {
     };
   }, [triggerFetch]);
 
-  return <div>{!auth.user ? <Authenticator /> : <App text={text} />}</div>;
+  return (
+    <div>
+      <Header />
+      {!auth.user ? (
+        <Authenticator />
+      ) : (
+        <div>
+          <App text={text} />
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default connect(
