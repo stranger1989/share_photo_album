@@ -8,6 +8,10 @@ import { createStyles, fade, Theme, makeStyles } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import MaterialUiForm from './Form';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -67,7 +71,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const Header: React.FC<any> = ({ auth, authActions }) => {
+const Header: React.FC<any> = ({ auth, authActions, open, handleClickOpen, handleClose, submit }) => {
   const classes = useStyles();
 
   return (
@@ -95,10 +99,16 @@ const Header: React.FC<any> = ({ auth, authActions }) => {
                   inputProps={{ 'aria-label': 'search' }}
                 />
               </div>
+              <Button color="inherit" className={classes.margin} onClick={handleClickOpen}>
+                Post Article
+              </Button>
+              <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" maxWidth="sm" fullWidth>
+                <DialogTitle id="form-dialog-title">Post Article</DialogTitle>
+                <DialogContent><MaterialUiForm onSubmit={submit} /></DialogContent>
+              </Dialog>
               <Button
-                variant="contained"
                 size="medium"
-                color="default"
+                color="inherit"
                 className={classes.margin}
                 onClick={(): void => authActions.handleSignout()}
               >
