@@ -5,7 +5,7 @@ import { Hub } from 'aws-amplify';
 import { Authenticator } from 'aws-amplify-react';
 
 import * as AuthActions from '../actions/Auth';
-import App from '../components/App';
+import Article from '../components/Article';
 import Header from './Header';
 
 const mapStateToProps = (state: any): any => ({
@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch: Dispatch): any => {
   };
 };
 
-const text = 'text message is ...';
+// const text = 'text message is ...';
 
 const AppContainer: FC<any> = ({ auth, authActions }) => {
   const [triggerFetch, setTriggerFetch] = useState(false);
@@ -60,7 +60,7 @@ const AppContainer: FC<any> = ({ auth, authActions }) => {
         <Authenticator />
       ) : (
         <div>
-          <App text={text} />
+          <Article />
         </div>
       )}
     </div>
