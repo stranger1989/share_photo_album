@@ -3,19 +3,23 @@ import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 
 import * as AuthActions from '../actions/Auth';
+import * as albumActions from '../actions/AlbumAPI';
+
 import Header from '../components/Header';
 
 const mapStateToProps = (state: any): any => ({
   auth: state.auth,
+  albumState: state.album,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): any => {
   return {
     authActions: bindActionCreators(AuthActions, dispatch),
+    albumActions: bindActionCreators(albumActions, dispatch),
   };
 };
 
-const HeaderContainer: FC<any> = ({ auth, authActions }) => {
+const HeaderContainer: FC<any> = ({ auth, authActions, albumState, albumActions }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -26,9 +30,10 @@ const HeaderContainer: FC<any> = ({ auth, authActions }) => {
     setOpen(false);
   };
 
-  const submit = () => {
+  const submit = async (values: any) => {
     // print the form values to the console
     setOpen(false);
+    await albumActions.createAlbumFunc(albumState.albums, values);
   };
 
   return (
