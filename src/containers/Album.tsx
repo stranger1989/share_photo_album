@@ -17,12 +17,12 @@ const mapDispatchToProps = (dispatch: Dispatch): any => {
 
 const AlbumContainer: FC<any> = ({ albumState, albumActions }) => {
   useEffect(() => {
-    albumActions.getAlbumList();
+    albumActions.getAlbumListFunc();
   }, []);
 
-  return albumState.isLoading ? (null) : (
+  return (
     <>
-      <Album albums={albumState.albums} />
+      <Album albumState={albumState} albums={albumState.albums} />
     </>
   )
 };

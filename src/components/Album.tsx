@@ -18,6 +18,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
@@ -42,13 +44,27 @@ const useStyles = makeStyles((theme: Theme) =>
     avatar: {
       backgroundColor: red[500],
     },
+    setDisplayCenter: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh',
+    },
+    progress: {
+      margin: theme.spacing(2),
+    },
   }),
 );
 
-const Album: React.FC<any> = ({ albums }) => {
+const Album: React.FC<any> = ({ albumState, albums }) => {
   const classes = useStyles();
 
-  return (
+  return albumState.isLoading ? (
+    <Container maxWidth="xl" className={classes.setDisplayCenter} >
+      <CircularProgress className={classes.progress} />
+    </Container>
+  ) :
+  (
     <>
       <Container maxWidth="lg">
         <Grid
