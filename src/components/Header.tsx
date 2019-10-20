@@ -100,10 +100,10 @@ const Header: React.FC<any> = ({ auth, authActions, open, handleClickOpen, handl
                 />
               </div>
               <Button color="inherit" className={classes.margin} onClick={handleClickOpen}>
-                Post Article
+                Post Album
               </Button>
               <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" maxWidth="sm" fullWidth>
-                <DialogTitle id="form-dialog-title">Post Article</DialogTitle>
+                <DialogTitle id="form-dialog-title">Post Album</DialogTitle>
                 <DialogContent><MaterialUiForm onSubmit={submit} /></DialogContent>
               </Dialog>
               <Button
