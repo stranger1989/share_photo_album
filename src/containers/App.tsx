@@ -5,7 +5,7 @@ import { Hub } from 'aws-amplify';
 import { Authenticator } from 'aws-amplify-react';
 
 import * as AuthActions from '../actions/Auth';
-import Article from '../components/Article';
+import Album from './Album';
 import Header from './Header';
 
 const mapStateToProps = (state: any): any => ({
@@ -60,7 +60,7 @@ const AppContainer: FC<any> = ({ auth, authActions }) => {
         <Authenticator />
       ) : (
         <div>
-          <Article />
+          <Album />
         </div>
       )}
     </div>

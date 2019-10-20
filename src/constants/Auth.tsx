@@ -45,6 +45,16 @@ export const amplifyConfig: Function = () => {
       userPoolId: process.env.REACT_APP_USERPOOL_ID,
       userPoolWebClientId: process.env.REACT_APP_USERPOOL_WEBCLIENT_ID,
     },
+    Storage: {
+      AWSS3: {
+        bucket: process.env.REACT_APP_S3_BUCKET,
+        region: process.env.REACT_APP_REGION,
+      },
+    },
+    aws_appsync_graphqlEndpoint: process.env.REACT_APP_APPSYNC_GRAPHQL_ENDPOINT,
+    aws_appsync_region: process.env.REACT_APP_REGION,
+    aws_appsync_authenticationType: 'AMAZON_COGNITO_USER_POOLS',
+    aws_appsync_apiKey: process.env.REACT_APP_APPSYNC_APIKEY,
   });
   I18n.putVocabularies(jaAuthDict);
   I18n.setLanguage('ja');
