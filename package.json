@@ -21,7 +21,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-form": "^8.2.6",
     "redux-thunk": "^2.3.0",
-    "typescript": "3.6.3"
+    "typescript": "3.6.3",
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -66,6 +67,7 @@
     "@types/storybook__addon-links": "^3.3.5",
     "@types/storybook__addon-storyshots": "^5.1.1",
     "@types/storybook__react": "^4.0.2",
+    "@types/uuid": "^3.4.5",
     "@typescript-eslint/eslint-plugin": "^2.3.0",
     "@typescript-eslint/parser": "^2.3.0",
     "cypress": "^3.4.1",
