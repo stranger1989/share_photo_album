@@ -101,7 +101,7 @@ export const createAlbumFunc = (albums: any, values: any) => {
             }),
           );
 
-          return Photo.data.createPicture;
+          return Photo.data.createAlbumPicture;
         }),
       );
     } else {

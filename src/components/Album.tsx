@@ -1,13 +1,17 @@
 import React from 'react';
 import _ from 'lodash';
+import { S3Image } from 'aws-amplify-react';
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
@@ -43,6 +47,23 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     avatar: {
       backgroundColor: red[500],
+    },
+    gridList: {
+      flexWrap: 'nowrap',
+      // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+      transform: 'translateZ(0)',
+    },
+    title: {
+      color: theme.palette.primary.light,
+    },
+    titleBar: {
+      background:
+        'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+    },
+    dummyImage: {
+      maxWidth: '100%',
+      maxHeight: '100%',
+      backgroundColor: 'lightgray',
     },
     setDisplayCenter: {
       display: 'flex',
@@ -90,7 +111,37 @@ const Album: React.FC<any> = ({ albumState, albums }) => {
                   title={album.title}
                   subheader={album.createdAt}
                 />
-                <CardMedia className={classes.media} image="/static/images/cards/paella.jpg" title="Paella dish" />
+                <GridList className={classes.gridList} cols={1}>
+                  {album.picture.length === 0 ?
+                    (<div className={classes.dummyImage} />) :
+                    (_.map(album.picture, (tile: any) => (
+                    <GridListTile key={tile.id}>
+                      <S3Image
+                        level="public"
+                        imgKey={tile.file.key}
+                        theme={{
+                          photoImg: {
+                            maxWidth: '100%',
+                            maxHeight: '100%',
+                            objectFit: 'cover',
+                          },
+                        }}
+                      />
+                      <GridListTileBar
+                        title={tile.name}
+                        classes={{
+                          root: classes.titleBar,
+                          title: classes.title,
+                        }}
+                        actionIcon={
+                          <IconButton aria-label={`star ${tile.name}`}>
+                            <StarBorderIcon className={classes.title} />
+                          </IconButton>
+                        }
+                      />
+                    </GridListTile>
+                  )))}
+                </GridList>
                 <CardContent>
                   <Typography variant="body2" color="textSecondary" component="p">
                     {album.note}
