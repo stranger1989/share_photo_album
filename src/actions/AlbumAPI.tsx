@@ -35,6 +35,12 @@ const createAlbum = `mutation createAlbum($createAlbuminput: CreateAlbumInput!) 
   }
 }`;
 
+const deleteAlbum = `mutation deleteAlbum($deleteAlbuminput: DeleteAlbumInput!) {
+  deleteAlbum(input: $deleteAlbuminput) {
+    id
+  }
+}`;
+
 const createAlbumPicture = `mutation createAlbumPicture($createAlbumPictureinput: CreateAlbumPictureInput!) {
   createAlbumPicture(input: $createAlbumPictureinput) {
     id
@@ -46,6 +52,12 @@ const createAlbumPicture = `mutation createAlbumPicture($createAlbumPictureinput
       key
     }
     createdAt
+  }
+}`;
+
+const deletePicture = `mutation deleteAlbumPicture($deleteAlbumPictureinput: DeleteAlbumPictureInput!) {
+  deleteAlbumPicture(input: $deleteAlbumPictureinput) {
+    id
   }
 }`;
 
@@ -115,6 +127,47 @@ export const createAlbumFunc = (albums: any, values: any) => {
     AlbumAPIActionType.CREATE_ALBUM_START,
     AlbumAPIActionType.CREATE_ALBUM_SUCCEED,
     AlbumAPIActionType.CREATE_ALBUM_FAIL,
+    uniqueLogicFunc,
+  );
+};
+
+export const deleteAlbumFunc = (albums: any, album: any): any => {
+  const uniqueLogicFunc = async () => {
+    const deleteId = await API.graphql(
+      graphqlOperation(deleteAlbum, {
+        deleteAlbuminput: {
+          id: album.id,
+        },
+      }),
+    );
+
+    return _.compact(await Promise.all(
+      _.map(albums, async (value: any) => {
+        if (value.id === deleteId.data.deleteAlbum.id) {
+          await Promise.all(
+            _.map(value.picture, async (picture: any) => {
+              await Storage.remove(picture.file.key, { level: 'public' });
+
+              return API.graphql(
+                graphqlOperation(deletePicture, {
+                  deleteAlbumPictureinput: {
+                    id: picture.id,
+                  },
+                }),
+              );
+            }),
+          );
+          return '';
+        } else {
+          return value;
+        }
+      })));
+  };
+
+  return apiRequestFunc(
+    AlbumAPIActionType.DELETE_ALBUM_START,
+    AlbumAPIActionType.DELETE_ALBUM_SUCCEED,
+    AlbumAPIActionType.DELETE_ALBUM_FAIL,
     uniqueLogicFunc,
   );
 };

@@ -21,6 +21,7 @@ const apiReducer: Reducer<AlbumApiState> = (
   switch (action.type) {
     case AlbumAPIActionType.LIST_ALBUMS_START:
     case AlbumAPIActionType.CREATE_ALBUM_START:
+    case AlbumAPIActionType.DELETE_ALBUM_START:
       return {
         ...state,
         albums: [],
@@ -29,6 +30,7 @@ const apiReducer: Reducer<AlbumApiState> = (
       };
     case AlbumAPIActionType.LIST_ALBUMS_SUCCEED:
     case AlbumAPIActionType.CREATE_ALBUM_SUCCEED:
+    case AlbumAPIActionType.DELETE_ALBUM_SUCCEED:
       return {
         ...state,
         albums: action.payload.result,
@@ -37,6 +39,7 @@ const apiReducer: Reducer<AlbumApiState> = (
       };
     case AlbumAPIActionType.LIST_ALBUMS_FAIL:
     case AlbumAPIActionType.CREATE_ALBUM_FAIL:
+    case AlbumAPIActionType.DELETE_ALBUM_FAIL:
       return {
         ...state,
         isLoading: false,

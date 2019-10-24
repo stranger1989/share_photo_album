@@ -20,9 +20,13 @@ const AlbumContainer: FC<any> = ({ albumState, albumActions }) => {
     albumActions.getAlbumListFunc();
   }, []);
 
+  const albumDelete = (album: any) => {
+    albumActions.deleteAlbumFunc(albumState.albums, album);
+  };
+
   return (
     <>
-      <Album albumState={albumState} albums={albumState.albums} />
+      <Album albumState={albumState} albums={albumState.albums} albumDelete={albumDelete}/>
     </>
   )
 };

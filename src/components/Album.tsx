@@ -18,8 +18,7 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import Delete from '@material-ui/icons/Delete';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -77,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const Album: React.FC<any> = ({ albumState, albums }) => {
+const Album: React.FC<any> = ({ albumState, albums, albumDelete }) => {
   const classes = useStyles();
 
   return albumState.isLoading ? (
@@ -148,11 +147,11 @@ const Album: React.FC<any> = ({ albumState, albums }) => {
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                  <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                  </IconButton>
-                  <IconButton aria-label="share">
-                    <ShareIcon />
+                  <IconButton
+                    aria-label="delete"
+                    onClick={() => albumDelete(album)}
+                  >
+                    <Delete />
                   </IconButton>
                 </CardActions>
               </Card>
