@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
+import { S3Image } from 'aws-amplify-react';
+
 import { Box } from '@material-ui/core';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon';
@@ -53,6 +55,7 @@ const useStyles = makeStyles(() =>
 
 const Previews: React.FC<any> = ({ input, reset, resetTriger }) => {
   const classes = useStyles();
+  const [updateValue, setupdateValue] = useState(input);
   const [files, setFiles] = useState([]);
 
   const { getRootProps, getInputProps } = useDropzone({
@@ -76,9 +79,38 @@ const Previews: React.FC<any> = ({ input, reset, resetTriger }) => {
     </div>
   ));
 
+  const updateThumbs = updateValue.value
+    ? updateValue.value.map((image: any) => (
+        <div style={thumb} key={image.name}>
+          <div style={thumbInner}>
+            <S3Image
+              level="public"
+              imgKey={image.file.key}
+              theme={{
+                photoImg: {
+                  // maxWidth: '100%',
+                  // maxHeight: '100%',
+                  // objectFit: 'scale-down',
+                  display: 'block',
+                  width: 'auto',
+                  height: 100,
+                },
+              }}
+              // alt="preview"
+              // style={img}
+            />
+          </div>
+        </div>
+      ))
+    : null;
+
   useEffect(() => {
     // Make sure to revoke the data uris to avoid memory leaks
-    input.onChange(files);
+    if (files.length === 0) {
+      if (updateValue.value) input.onChange(updateValue.value);
+    } else {
+      input.onChange(files);
+    }
     files.forEach((file: any) => URL.revokeObjectURL(file.preview));
   }, [files]);
 
@@ -98,7 +130,7 @@ const Previews: React.FC<any> = ({ input, reset, resetTriger }) => {
           Drag and drop some files here, or click to select files<br />
           <Icon fontSize="large">photo</Icon>
           <aside style={thumbsContainer}>
-            {thumbs}
+            {files.length === 0 ? updateThumbs : thumbs}
           </aside>
         </Box>
       </div>

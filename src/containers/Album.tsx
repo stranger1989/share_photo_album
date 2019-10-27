@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 
@@ -16,17 +16,47 @@ const mapDispatchToProps = (dispatch: Dispatch): any => {
 };
 
 const AlbumContainer: FC<any> = ({ albumState, albumActions }) => {
+  const [open, setOpen] = useState(false);
+  const [albums, setAlbums] = useState([]);
+  const [updateValue, setUpdateValue] = useState([]);
+
   useEffect(() => {
-    albumActions.getAlbumListFunc();
-  }, []);
+    if (albumState.isLoaded) {
+      setAlbums(albumState.albums);
+    }
+  }, [albumState.isLoaded]);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const albumDelete = (album: any) => {
-    albumActions.deleteAlbumFunc(albumState.albums, album);
+    albumActions.deleteAlbumFunc(albums, album);
+  };
+
+  const update = async (album: any): Promise<void> => {
+    // print the form values to the console
+    setOpen(false);
+    await albumActions.updateAlbumFunc(albums, album);
   };
 
   return (
     <>
-      <Album albumState={albumState} albums={albumState.albums} albumDelete={albumDelete}/>
+      <Album
+        albumState={albumState}
+        open={open}
+        handleClickOpen={handleClickOpen}
+        handleClose={handleClose}
+        albums={albumState.albums}
+        albumDelete={albumDelete}
+        update={update}
+        setUpdateValue={setUpdateValue}
+        updateValue={updateValue}
+      />
     </>
   )
 };

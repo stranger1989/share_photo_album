@@ -35,6 +35,17 @@ const createAlbum = `mutation createAlbum($createAlbuminput: CreateAlbumInput!) 
   }
 }`;
 
+const updateAlbum = `mutation updateAlbum($updateAlbuminput: UpdateAlbumInput!) {
+  updateAlbum(input: $updateAlbuminput) {
+    id
+    title
+    visible
+    note
+    owner
+    createdAt
+  }
+}`;
+
 const deleteAlbum = `mutation deleteAlbum($deleteAlbuminput: DeleteAlbumInput!) {
   deleteAlbum(input: $deleteAlbuminput) {
     id
@@ -127,6 +138,91 @@ export const createAlbumFunc = (albums: any, values: any) => {
     AlbumAPIActionType.CREATE_ALBUM_START,
     AlbumAPIActionType.CREATE_ALBUM_SUCCEED,
     AlbumAPIActionType.CREATE_ALBUM_FAIL,
+    uniqueLogicFunc,
+  );
+};
+
+export const updateAlbumFunc = (albums: any, album: any): any => {
+  const uniqueLogicFunc = async () => {
+    const albumInfo = await API.graphql(
+      graphqlOperation(updateAlbum, {
+        updateAlbuminput: {
+          id: album.id,
+          title: album.title,
+          visible: album.visible,
+          note: album.note,
+          owner: album.username,
+          createdAt: new Date().toISOString(),
+        },
+      }),
+    ).then((response: any) => response.data.updateAlbum);
+
+    let updatePicture = album.picture;
+
+    const removeAlbums: any[] = _.compact(await Promise.all(
+      _.map(albums, async (value: any) => {
+        if (value.id === albumInfo.id) {
+          // if the initial picture array is different from updateed one.
+          if (value.picture !== album.picture) {
+            // delete initial picure from aws DB & S3
+            await Promise.all(
+              _.map(value.picture, async (picture: any) => {
+                await Storage.remove(picture.file.key, { level: 'public' });
+
+                return API.graphql(
+                  graphqlOperation(deletePicture, {
+                    deleteAlbumPictureinput: {
+                      id: picture.id,
+                    },
+                  }),
+                );
+              }),
+            );
+
+            // create updated picure into aws DB & S3
+            if (album.picture.length !== 0) {
+              updatePicture = await Promise.all(
+                _.map(album.picture, async (image: any) => {
+                  const S3image: any = await Storage.put(uuid(), image, {
+                    contentType: image.type,
+                  });
+
+                  const Photo: any = await API.graphql(
+                    graphqlOperation(createAlbumPicture, {
+                      createAlbumPictureinput: {
+                        name: image.name,
+                        albumId: albumInfo.id,
+                        file: {
+                          bucket: process.env.REACT_APP_S3_BUCKET,
+                          region: process.env.REACT_APP_REGION,
+                          key: S3image.key,
+                        },
+                        createdAt: new Date().toISOString(),
+                      },
+                    }),
+                  );
+
+                  return Photo.data.createAlbumPicture;
+                }),
+              );
+            }
+          }
+
+          return '';
+        } else {
+          return value;
+        }
+    })));
+
+    albumInfo.picture = updatePicture
+
+    return [...removeAlbums, albumInfo];
+  };
+
+  return apiRequestFunc(
+    AlbumAPIActionType.UPDATE_ALBUM_START,
+    AlbumAPIActionType.UPDATE_ALBUM_SUCCEED,
+    AlbumAPIActionType.UPDATE_ALBUM_FAIL,
     uniqueLogicFunc,
   );
 };

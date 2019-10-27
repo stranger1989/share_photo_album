@@ -5,22 +5,25 @@ import { Hub } from 'aws-amplify';
 import { Authenticator } from 'aws-amplify-react';
 
 import * as AuthActions from '../actions/Auth';
+import * as albumActions from '../actions/AlbumAPI';
 import Album from './Album';
 import Header from './Header';
 
 const mapStateToProps = (state: any): any => ({
   auth: state.auth,
+  albumState: state.album,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): any => {
   return {
     authActions: bindActionCreators(AuthActions, dispatch),
+    albumActions: bindActionCreators(albumActions, dispatch),
   };
 };
 
 // const text = 'text message is ...';
 
-const AppContainer: FC<any> = ({ auth, authActions }) => {
+const AppContainer: FC<any> = ({ auth, authActions, albumActions }) => {
   const [triggerFetch, setTriggerFetch] = useState(false);
 
   useEffect(() => {
@@ -52,6 +55,13 @@ const AppContainer: FC<any> = ({ auth, authActions }) => {
       isMounted = false;
     };
   }, [triggerFetch]);
+
+  useEffect(() => {
+    const f = async () => {
+      await albumActions.getAlbumListFunc();
+    };
+    f();
+  }, []);
 
   return (
     <div>
