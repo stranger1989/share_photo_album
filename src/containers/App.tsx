@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
-import { Hub } from 'aws-amplify';
+import { Hub, API, graphqlOperation } from 'aws-amplify';
 import { Authenticator } from 'aws-amplify-react';
 
 import * as AuthActions from '../actions/Auth';
@@ -56,8 +56,37 @@ const AppContainer: FC<any> = ({ auth, authActions, albumActions }) => {
     };
   }, [triggerFetch]);
 
+  const onCreateAlbumPicture = `subscription onCreateAlbumPictureSub {
+    onCreateAlbumPicture {
+        __typename
+        id
+        albumId
+        name
+        createdAt
+    }
+  }`;
+
+  const onDeleteAlbum = `subscription onDeleteAlbumSub {
+    onDeleteAlbum {
+        __typename
+        id
+    }
+  }`;
+
   useEffect(() => {
     const f = async () => {
+      await API.graphql(graphqlOperation(onCreateAlbumPicture)).subscribe({
+        next: async () => {
+            // console.log('eventData: ', eventData);
+            await albumActions.getAlbumListFunc();
+          }
+        });
+      await API.graphql(graphqlOperation(onDeleteAlbum)).subscribe({
+        next: async () => {
+            // console.log('eventData: ', eventData);
+            await albumActions.getAlbumListFunc();
+          }
+        });
       await albumActions.getAlbumListFunc();
     };
     f();
