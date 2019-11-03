@@ -104,7 +104,9 @@ const Header: React.FC<any> = ({ auth, authActions, open, handleClickOpen, handl
               </Button>
               <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" maxWidth="sm" fullWidth>
                 <DialogTitle id="form-dialog-title">Post Album</DialogTitle>
-                <DialogContent><MaterialUiForm onSubmit={submit} /></DialogContent>
+                <DialogContent>
+                  <MaterialUiForm onSubmit={submit} initialValues={{visible: 'public'}} />
+                </DialogContent>
               </Dialog>
               <Button
                 size="medium"

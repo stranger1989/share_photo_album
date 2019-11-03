@@ -32,15 +32,12 @@ const asyncValidate = (values: any) => {
 
 const validate = (values: any) => {
   const errors: any = {};
-  const requiredFields = ['firstName', 'lastName', 'email', 'favoriteColor', 'notes'];
+  const requiredFields = ['title', 'visible','imageToUpload', 'notes'];
   requiredFields.forEach(field => {
-    if (!values[field]) {
+    if (!values[field] || values[field].length === 0) {
       errors[field] = 'Required';
     }
   });
-  if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
 
   return errors;
 };
@@ -78,7 +75,7 @@ const renderSelectField: React.FC<any> = ({ input, label, meta: { touched, error
 );
 
 const MaterialUiForm = (props: any) => {
-  const { handleSubmit, pristine, reset, submitting } = props;
+  const { handleSubmit, pristine, reset, submitting, invalid } = props;
   const [resetStatue, resetTriger] = React.useState(false);
   const classes = useStyles();
 
@@ -107,7 +104,7 @@ const MaterialUiForm = (props: any) => {
         <Field name="notes" component={renderTextField} label="Notes" multiline rowsMax="4" margin="normal" />
       </div>
       <DialogActions>
-        <Button type="submit" disabled={pristine || submitting} color="primary">
+        <Button type="submit" disabled={pristine || submitting || invalid} color="primary">
           Submit
         </Button>
         <Button
