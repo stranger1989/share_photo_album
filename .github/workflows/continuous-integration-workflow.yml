@@ -1,10 +1,10 @@
-name: Cypress Testing
+name: Testing
 # This workflow is triggered on pushes to the repository.
 on: [push]
 
 jobs:
   container-job:
-    name: Cypress Testing
+    name: Testing
     runs-on: ubuntu-latest
 
     steps:
@@ -12,8 +12,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn install
-      - run: CI=true yarn test
-      - run: npm install forever -g
-      - run: forever start -c "yarn start" ./
-      - run: yarn cypress:run --spec "cypress/integration/app.spec.ts"
+      - run: npm i
+      - run: CI=true npm run test
+      - run: npm i forever -g
+      - run: forever start -c "npm start" ./
+      - run: npx cypress run --spec "cypress/integration/app_light.spec.ts"
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y libappindicator1 fonts-liberation
+      - run: curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - run: sudo dpkg -i google-chrome-stable_current_amd64.deb
+      - run: npx testcafe chrome:headless testcafe/test1_light.ts
