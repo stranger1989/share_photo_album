@@ -8,27 +8,15 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-import Previews from './ImageUpload';
+import ImageUpload from '../../containers/ImageUpload';
 
 const useStyles = makeStyles(() =>
   createStyles({
     field: {
       marginTop: 20,
     },
-  }),
+  })
 );
-
-const sleep = (ms: number) => new Promise((resolve: any) => setTimeout(resolve, ms));
-
-const asyncValidate = (values: any) => {
-  return sleep(1000).then(() => {
-    // simulate server latency
-    if (['foo@foo.com', 'bar@bar.com'].includes(values.email)) {
-      // eslint-disable-next-line no-throw-literal
-      throw { email: 'Email already Exists' };
-    }
-  });
-};
 
 const validate = (values: any) => {
   const errors: any = {};
@@ -38,14 +26,16 @@ const validate = (values: any) => {
       errors[field] = 'Required';
     }
   });
-  if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
 
   return errors;
 };
 
-const renderTextField: React.FC<any> = ({ label, input, meta: { touched, invalid, error }, ...custom }) => (
+const renderTextField: React.FC<any> = ({
+  label,
+  input,
+  meta: { touched, invalid, error },
+  ...custom
+}) => (
   <TextField
     fullWidth
     label={label}
@@ -59,9 +49,17 @@ const renderTextField: React.FC<any> = ({ label, input, meta: { touched, invalid
   />
 );
 
-const renderSelectField: React.FC<any> = ({ input, label, meta: { touched, error }, children, ...custom }) => (
+const renderSelectField: React.FC<any> = ({
+  input,
+  label,
+  meta: { touched, error },
+  children,
+  ...custom
+}) => (
   <FormControl error={touched && error}>
-    <InputLabel htmlFor="visible" shrink={true}>Visible</InputLabel>
+    <InputLabel htmlFor="visible" shrink={true}>
+      Visible
+    </InputLabel>
     <Select
       native
       {...input}
@@ -89,14 +87,16 @@ const UpdateForm = (props: any) => {
       </div>
       <div className={classes.field}>
         <Field name="visible" component={renderSelectField} label="Visible">
-          <option value="public" defaultChecked>public</option>
+          <option value="public" defaultChecked>
+            public
+          </option>
           <option value="private">private</option>
         </Field>
       </div>
       <div>
         <Field
           name="picture"
-          component={Previews}
+          component={ImageUpload}
           type="file"
           value={null}
           reset={resetStatue}
@@ -104,10 +104,21 @@ const UpdateForm = (props: any) => {
         />
       </div>
       <div>
-        <Field name="note" component={renderTextField} label="Note" multiline rowsMax="4" margin="normal" />
+        <Field
+          name="note"
+          component={renderTextField}
+          label="Note"
+          multiline
+          rowsMax="4"
+          margin="normal"
+        />
       </div>
       <DialogActions>
-        <Button type="submit" disabled={pristine || submitting || invalid} color="primary">
+        <Button
+          type="submit"
+          disabled={pristine || submitting || invalid}
+          color="primary"
+        >
           Submit
         </Button>
         <Button
@@ -129,5 +140,4 @@ const UpdateForm = (props: any) => {
 export default reduxForm({
   form: 'UpdateForm', // a unique identifier for this form
   validate,
-  asyncValidate,
 })(UpdateForm);

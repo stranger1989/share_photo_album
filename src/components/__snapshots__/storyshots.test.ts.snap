@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ./App ./App 1`] = `
+exports[`Storyshots ./Album Album 1`] = `
 Array [
   <div
     style={
@@ -11,28 +11,2838 @@ Array [
     }
   >
     <div
-      className="css-1og1vvo-App"
+      className="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-554"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-justify-xs-space-evenly"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-544 MuiPaper-rounded"
+          >
+            <div
+              className="MuiCardHeader-root"
+            >
+              <div
+                className="MuiCardHeader-avatar"
+              >
+                <div
+                  aria-label="recipe"
+                  className="MuiAvatar-root makeStyles-avatar-545 MuiAvatar-colorDefault"
+                >
+                  test
+                </div>
+              </div>
+              <div
+                className="MuiCardHeader-content"
+              >
+                <span
+                  className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  test
+                </span>
+                <span
+                  className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                >
+                  2019-12-01 00:00
+                </span>
+              </div>
+              <div
+                className="MuiCardHeader-action"
+              >
+                <button
+                  aria-label="settings"
+                  className="MuiButtonBase-root MuiIconButton-root"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="MuiSvgIcon-root"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <ul
+              className="MuiGridList-root makeStyles-gridList-746"
+              style={
+                Object {
+                  "margin": -2,
+                }
+              }
+            >
+              <div
+                className="makeStyles-dummyImage-749"
+                style={
+                  Object {
+                    "height": 184,
+                    "padding": 2,
+                    "width": "100%",
+                  }
+                }
+              />
+            </ul>
+            <div
+              className="MuiCardContent-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              >
+                testtest
+              </p>
+            </div>
+            <div
+              className="MuiCardActions-root"
+            >
+              <button
+                aria-label="delete"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                aria-label="edit"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-544 MuiPaper-rounded"
+          >
+            <div
+              className="MuiCardHeader-root"
+            >
+              <div
+                className="MuiCardHeader-avatar"
+              >
+                <div
+                  aria-label="recipe"
+                  className="MuiAvatar-root makeStyles-avatar-545 MuiAvatar-colorDefault"
+                >
+                  test
+                </div>
+              </div>
+              <div
+                className="MuiCardHeader-content"
+              >
+                <span
+                  className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  test
+                </span>
+                <span
+                  className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                >
+                  2019-12-01 00:00
+                </span>
+              </div>
+              <div
+                className="MuiCardHeader-action"
+              >
+                <button
+                  aria-label="settings"
+                  className="MuiButtonBase-root MuiIconButton-root"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="MuiSvgIcon-root"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <ul
+              className="MuiGridList-root makeStyles-gridList-746"
+              style={
+                Object {
+                  "margin": -2,
+                }
+              }
+            >
+              <div
+                className="makeStyles-dummyImage-749"
+                style={
+                  Object {
+                    "height": 184,
+                    "padding": 2,
+                    "width": "100%",
+                  }
+                }
+              />
+            </ul>
+            <div
+              className="MuiCardContent-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              >
+                testtest
+              </p>
+            </div>
+            <div
+              className="MuiCardActions-root"
+            >
+              <button
+                aria-label="delete"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                aria-label="edit"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-544 MuiPaper-rounded"
+          >
+            <div
+              className="MuiCardHeader-root"
+            >
+              <div
+                className="MuiCardHeader-avatar"
+              >
+                <div
+                  aria-label="recipe"
+                  className="MuiAvatar-root makeStyles-avatar-545 MuiAvatar-colorDefault"
+                >
+                  test
+                </div>
+              </div>
+              <div
+                className="MuiCardHeader-content"
+              >
+                <span
+                  className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  test
+                </span>
+                <span
+                  className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                >
+                  2019-12-01 00:00
+                </span>
+              </div>
+              <div
+                className="MuiCardHeader-action"
+              >
+                <button
+                  aria-label="settings"
+                  className="MuiButtonBase-root MuiIconButton-root"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="MuiSvgIcon-root"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <ul
+              className="MuiGridList-root makeStyles-gridList-746"
+              style={
+                Object {
+                  "margin": -2,
+                }
+              }
+            >
+              <div
+                className="makeStyles-dummyImage-749"
+                style={
+                  Object {
+                    "height": 184,
+                    "padding": 2,
+                    "width": "100%",
+                  }
+                }
+              />
+            </ul>
+            <div
+              className="MuiCardContent-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              >
+                testtest
+              </p>
+            </div>
+            <div
+              className="MuiCardActions-root"
+            >
+              <button
+                aria-label="delete"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                aria-label="edit"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./Button ./Button 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="MuiList-root makeStyles-root-1 MuiList-padding"
+    >
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Menu Button
+          </span>
+        </button>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <button
+          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+              />
+            </svg>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./Color ./accentColor 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="MuiList-root makeStyles-root-224 MuiList-padding"
+    >
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-accent-color-light-243 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            accent-color-light
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #FF6428
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-accent-color-main-244 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            accent-color-main
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #FF9678
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-accent-color-dark-245 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            accent-color-dark
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #c41c00
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-accent-color-contrastText-246 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            accent-color-contrastText
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #FFF
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./Color ./baseColor 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="MuiList-root makeStyles-root-66 MuiList-padding"
+    >
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-50-67 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-50
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #fafafa
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-100-68 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-100
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #f5f5f5
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-200-69 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-200
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #eeeeee
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-300-70 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-300
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #e0e0e0
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-400-71 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-400
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #bdbdbd
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-500-72 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-500
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #9e9e9e
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-600-73 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-600
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #757575
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-700-74 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-700
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #616161
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-800-75 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-800
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #424242
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-900-76 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-900
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #212121
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-A100-77 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-A100
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #d5d5d5
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-A200-78 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-A200
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #aaaaaa
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-A400-79 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-A400
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #303030
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-base-color-A700-80 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            base-color-A700
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #616161
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./Color ./mainColor 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="MuiList-root makeStyles-root-145 MuiList-padding"
+    >
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-main-color-light-160 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            main-color-light
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #7383A2
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-main-color-main-161 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            main-color-main
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #445577
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-main-color-dark-162 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            main-color-dark
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #002f6c
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root makeStyles-main-color-contrastText-163 MuiAvatar-colorDefault"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            main-color-contrastText
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            #FFF
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./HeaderLogin HeaderLogin 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="makeStyles-root-843"
     >
       <header
-        className="css-t35jp5-App"
+        className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-844 MuiAppBar-colorPrimary mui-fixed"
       >
-        <p>
-          Edit 
-          <code>
-            src/App.tsx
-          </code>
-           and save to reload.
-        </p>
-        <a
-          className="css-1ohdzf6-App"
-          href="https://reactjs.org"
-          rel="noopener noreferrer"
-          target="_blank"
+        <div
+          className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
         >
-          text
-        </a>
+          <button
+            aria-label="open drawer"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-menuButton-845 MuiIconButton-colorInherit MuiIconButton-edgeStart"
+            disabled={false}
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                />
+              </svg>
+            </span>
+          </button>
+          <h6
+            className="MuiTypography-root makeStyles-title-907 MuiTypography-h6 MuiTypography-noWrap"
+          >
+            Share Photo Album
+          </h6>
+          <div
+            className="makeStyles-search-938"
+          >
+            <div
+              className="makeStyles-searchIcon-939"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+              </svg>
+            </div>
+            <div
+              className="MuiInputBase-root makeStyles-inputRoot-940"
+              onClick={[Function]}
+            >
+              <input
+                aria-label="search"
+                className="MuiInputBase-input makeStyles-inputInput-941"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                placeholder="Search…"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-963"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-text MuiButton-colorInherit"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={null}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiButton-label"
+              >
+                Post Album
+              </span>
+            </button>
+          </div>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-text MuiButton-colorInherit"
+            data-test="sign-out-button"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              Signout
+            </span>
+          </button>
+        </div>
       </header>
     </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./HeaderNotLogin HeaderNotLogin 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="makeStyles-root-769"
+    >
+      <header
+        className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-770 MuiAppBar-colorPrimary mui-fixed"
+      >
+        <div
+          className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+        >
+          <h6
+            className="MuiTypography-root makeStyles-title-812 MuiTypography-h6 MuiTypography-noWrap"
+          >
+            Share Photo Album
+          </h6>
+        </div>
+      </header>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./Icon ./Icon 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="MuiList-root makeStyles-root-303 MuiList-padding"
+    >
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root MuiAvatar-colorDefault"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            MenuIcon
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            SvgIcon
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root MuiAvatar-colorDefault"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            SearchIcon
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            SvgIcon
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root MuiAvatar-colorDefault"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            DeleteIcon
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            SvgIcon
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root MuiAvatar-colorDefault"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            EditIcon
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            SvgIcon
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root MuiAvatar-colorDefault"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            MoreVertIcon
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            SvgIcon
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root MuiAvatar-colorDefault"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            StarBorderIcon
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            SvgIcon
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="MuiListItemAvatar-root"
+        >
+          <div
+            className="MuiAvatar-root MuiAvatar-colorDefault"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="MuiListItemText-root MuiListItemText-multiline"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+          >
+            ImageIcon
+          </span>
+          <p
+            className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            SvgIcon
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./ImageUpload ImageUpload 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="dropzone"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={0}
+    >
+      <input
+        accept="image/*"
+        autoComplete="off"
+        multiple={true}
+        onChange={[Function]}
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+        tabIndex={-1}
+        type="file"
+      />
+      <div
+        className="MuiBox-root MuiBox-root-1012 makeStyles-dropBox-1007"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          Drag and drop some files here, or click to select files
+        </p>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+          />
+        </svg>
+        <div
+          className="MuiBox-root MuiBox-root-1052 makeStyles-thumbsContainer-1008"
+        />
+      </div>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./LoginForm LoginForm 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="Section__container___3YYTG"
+      style={
+        Object {
+          "fontFamily": "\\"Amazon Ember\\", \\"Helvetica Neue\\", sans-serif",
+          "fontWeight": "400",
+        }
+      }
+    >
+      <div
+        className="Form__formContainer___1GA3x"
+        style={
+          Object {
+            "margin": "0 auto 0",
+            "textAlign": "center",
+          }
+        }
+      >
+        <div
+          className="Form__formSection___1PPvW"
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderRadius": "6px",
+              "boxShadow": "1px 1px 4px 0 rgba(0,0,0,0.15)",
+              "display": "inline-block",
+              "marginBottom": "20px",
+              "marginTop": "100px",
+              "minWidth": "470px",
+              "padding": "35px 40px",
+              "position": "relative",
+              "textAlign": "left",
+            }
+          }
+        >
+          <div
+            className="Section__sectionBody___ihqqd"
+            style={
+              Object {
+                "marginBottom": "30px",
+              }
+            }
+          >
+            Loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./PhotoList PhotoList 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="MuiGridList-root makeStyles-gridList-449"
+      style={
+        Object {
+          "margin": -2,
+        }
+      }
+    >
+      <li
+        className="MuiGridListTile-root"
+        style={
+          Object {
+            "height": 184,
+            "padding": 2,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <img
+            src=""
+            style={
+              Object {
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "objectFit": "cover",
+              }
+            }
+          />
+          <div
+            className="MuiGridListTileBar-root makeStyles-titleBar-451 MuiGridListTileBar-titlePositionBottom"
+          >
+            <div
+              className="MuiGridListTileBar-titleWrap MuiGridListTileBar-titleWrapActionPosRight"
+            >
+              <div
+                className="MuiGridListTileBar-title makeStyles-title-450"
+              >
+                testphoto
+              </div>
+            </div>
+            <div
+              className="MuiGridListTileBar-actionIcon"
+            >
+              <button
+                aria-label="star testphoto"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root makeStyles-title-450"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="MuiGridListTile-root"
+        style={
+          Object {
+            "height": 184,
+            "padding": 2,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <img
+            src=""
+            style={
+              Object {
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "objectFit": "cover",
+              }
+            }
+          />
+          <div
+            className="MuiGridListTileBar-root makeStyles-titleBar-451 MuiGridListTileBar-titlePositionBottom"
+          >
+            <div
+              className="MuiGridListTileBar-titleWrap MuiGridListTileBar-titleWrapActionPosRight"
+            >
+              <div
+                className="MuiGridListTileBar-title makeStyles-title-450"
+              >
+                testphoto
+              </div>
+            </div>
+            <div
+              className="MuiGridListTileBar-actionIcon"
+            >
+              <button
+                aria-label="star testphoto"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root makeStyles-title-450"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="MuiGridListTile-root"
+        style={
+          Object {
+            "height": 184,
+            "padding": 2,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <img
+            src=""
+            style={
+              Object {
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "objectFit": "cover",
+              }
+            }
+          />
+          <div
+            className="MuiGridListTileBar-root makeStyles-titleBar-451 MuiGridListTileBar-titlePositionBottom"
+          >
+            <div
+              className="MuiGridListTileBar-titleWrap MuiGridListTileBar-titleWrapActionPosRight"
+            >
+              <div
+                className="MuiGridListTileBar-title makeStyles-title-450"
+              >
+                testphoto
+              </div>
+            </div>
+            <div
+              className="MuiGridListTileBar-actionIcon"
+            >
+              <button
+                aria-label="star testphoto"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root makeStyles-title-450"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="MuiGridListTile-root"
+        style={
+          Object {
+            "height": 184,
+            "padding": 2,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <img
+            src=""
+            style={
+              Object {
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "objectFit": "cover",
+              }
+            }
+          />
+          <div
+            className="MuiGridListTileBar-root makeStyles-titleBar-451 MuiGridListTileBar-titlePositionBottom"
+          >
+            <div
+              className="MuiGridListTileBar-titleWrap MuiGridListTileBar-titleWrapActionPosRight"
+            >
+              <div
+                className="MuiGridListTileBar-title makeStyles-title-450"
+              >
+                testphoto
+              </div>
+            </div>
+            <div
+              className="MuiGridListTileBar-actionIcon"
+            >
+              <button
+                aria-label="star testphoto"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root makeStyles-title-450"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="MuiGridListTile-root"
+        style={
+          Object {
+            "height": 184,
+            "padding": 2,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <img
+            src=""
+            style={
+              Object {
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "objectFit": "cover",
+              }
+            }
+          />
+          <div
+            className="MuiGridListTileBar-root makeStyles-titleBar-451 MuiGridListTileBar-titlePositionBottom"
+          >
+            <div
+              className="MuiGridListTileBar-titleWrap MuiGridListTileBar-titleWrapActionPosRight"
+            >
+              <div
+                className="MuiGridListTileBar-title makeStyles-title-450"
+              >
+                testphoto
+              </div>
+            </div>
+            <div
+              className="MuiGridListTileBar-actionIcon"
+            >
+              <button
+                aria-label="star testphoto"
+                className="MuiButtonBase-root MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root makeStyles-title-450"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./SearchForm SearchForm 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="makeStyles-search-490"
+    >
+      <div
+        className="makeStyles-searchIcon-491"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiInputBase-root makeStyles-inputRoot-492"
+        onClick={[Function]}
+      >
+        <input
+          aria-label="search"
+          className="MuiInputBase-input makeStyles-inputInput-493"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Search…"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./Spiner Spiner 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="MuiContainer-root makeStyles-setDisplayCenter-523 MuiContainer-maxWidthXl"
+    >
+      <div
+        className="MuiCircularProgress-root makeStyles-progress-524 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+        role="progressbar"
+        style={
+          Object {
+            "height": 40,
+            "width": 40,
+          }
+        }
+      >
+        <svg
+          className="MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+            cx={44}
+            cy={44}
+            fill="none"
+            r={20.2}
+            strokeWidth={3.6}
+            style={Object {}}
+          />
+        </svg>
+      </div>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./Typography ./baseTypography 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="MuiList-root MuiList-padding"
+    >
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <h1
+          className="MuiTypography-root MuiTypography-h1"
+        >
+          h1
+          . Heading
+        </h1>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <h2
+          className="MuiTypography-root MuiTypography-h2"
+        >
+          h2
+          . Heading
+        </h2>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <h3
+          className="MuiTypography-root MuiTypography-h3"
+        >
+          h3
+          . Heading
+        </h3>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4"
+        >
+          h4
+          . Heading
+        </h4>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5"
+        >
+          h5
+          . Heading
+        </h5>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-h6"
+        >
+          h6
+          . Heading
+        </h6>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-subtitle1"
+        >
+          subtitle1
+          . Heading
+        </h6>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-subtitle2"
+        >
+          subtitle2
+          . Heading
+        </h6>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          body1
+          . Heading
+        </p>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body2"
+        >
+          body2
+          . Heading
+        </p>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <span
+          className="MuiTypography-root MuiTypography-button"
+        >
+          button
+          . Heading
+        </span>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <span
+          className="MuiTypography-root MuiTypography-caption"
+        >
+          caption
+          . Heading
+        </span>
+      </li>
+      <li
+        className="MuiListItem-root MuiListItem-gutters"
+        disabled={false}
+      >
+        <span
+          className="MuiTypography-root MuiTypography-overline"
+        >
+          overline
+          . Heading
+        </span>
+      </li>
+    </ul>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots ./Typography ./mainTypography 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="MuiList-root MuiList-padding"
+    >
+      <h6
+        className="MuiTypography-root makeStyles-title-373 MuiTypography-h6 MuiTypography-noWrap"
+      >
+        Share Photo Album
+      </h6>
+    </ul>
   </div>,
   <button
     className="info__show-button"

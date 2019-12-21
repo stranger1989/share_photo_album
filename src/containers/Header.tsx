@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 
 import * as AuthActions from '../actions/Auth';
-import * as albumActions from '../actions/AlbumAPI';
+import * as albumActions from '../actions/Album';
 
-import Header from '../components/Header';
+import Header from '../components/03_organisms/Header';
 
 const mapStateToProps = (state: any): any => ({
   auth: state.auth,
@@ -19,7 +19,12 @@ const mapDispatchToProps = (dispatch: Dispatch): any => {
   };
 };
 
-const HeaderContainer: FC<any> = ({ auth, authActions, albumState, albumActions }) => {
+const HeaderContainer: FC<any> = ({
+  auth,
+  authActions,
+  albumState,
+  albumActions,
+}) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -52,5 +57,5 @@ const HeaderContainer: FC<any> = ({ auth, authActions, albumState, albumActions 
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(HeaderContainer);

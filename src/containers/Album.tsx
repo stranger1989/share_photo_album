@@ -1,9 +1,12 @@
 import React, { FC, useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
+import { API, graphqlOperation } from 'aws-amplify';
 
-import Album from '../components/Album';
-import * as albumActions from '../actions/AlbumAPI';
+import Spiner from '../components/02_molecules/Spiner';
+import Album from '../components/03_organisms/Album';
+import * as albumActions from '../actions/Album';
+import { onCreateAlbumPicture, onDeleteAlbum } from '../graphql/Album';
 
 const mapStateToProps = (state: any): any => ({
   albumState: state.album,
@@ -21,6 +24,22 @@ const AlbumContainer: FC<any> = ({ albumState, albumActions }) => {
   const [updateValue, setUpdateValue] = useState([]);
 
   useEffect(() => {
+    (async () => {
+      await API.graphql(graphqlOperation(onCreateAlbumPicture)).subscribe({
+        next: async () => {
+          await albumActions.getAlbumListFunc();
+        },
+      });
+      await API.graphql(graphqlOperation(onDeleteAlbum)).subscribe({
+        next: async () => {
+          await albumActions.getAlbumListFunc();
+        },
+      });
+      await albumActions.getAlbumListFunc();
+    })();
+  }, []);
+
+  useEffect(() => {
     if (albumState.isLoaded) {
       setAlbums(albumState.albums);
     }
@@ -34,34 +53,34 @@ const AlbumContainer: FC<any> = ({ albumState, albumActions }) => {
     setOpen(false);
   };
 
-  const albumDelete = (album: any) => {
-    albumActions.deleteAlbumFunc(albums, album);
+  const albumDelete = async (album: any): Promise<void> => {
+    await albumActions.deleteAlbumFunc(albums, album);
   };
 
-  const update = async (album: any): Promise<void> => {
-    // print the form values to the console
+  const albumUpdate = async (album: any): Promise<void> => {
     setOpen(false);
     await albumActions.updateAlbumFunc(albums, album);
   };
 
-  return (
+  return albumState.isLoading ? (
+    <Spiner />
+  ) : (
     <>
       <Album
-        albumState={albumState}
         open={open}
         handleClickOpen={handleClickOpen}
         handleClose={handleClose}
         albums={albumState.albums}
         albumDelete={albumDelete}
-        update={update}
+        albumUpdate={albumUpdate}
         setUpdateValue={setUpdateValue}
         updateValue={updateValue}
       />
     </>
-  )
+  );
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(AlbumContainer);

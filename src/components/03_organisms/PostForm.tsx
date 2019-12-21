@@ -1,38 +1,18 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import DialogActions from '@material-ui/core/DialogActions';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-import Previews from './ImageUpload';
-
-const useStyles = makeStyles(() =>
-  createStyles({
-    field: {
-      marginTop: 20,
-    },
-  }),
-);
-
-const sleep = (ms: number) => new Promise((resolve: any) => setTimeout(resolve, ms));
-
-const asyncValidate = (values: any) => {
-  return sleep(1000).then(() => {
-    // simulate server latency
-    if (['foo@foo.com', 'bar@bar.com'].includes(values.email)) {
-      // eslint-disable-next-line no-throw-literal
-      throw { email: 'Email already Exists' };
-    }
-  });
-};
+import ImageUpload from '../../containers/ImageUpload';
 
 const validate = (values: any) => {
   const errors: any = {};
-  const requiredFields = ['title', 'visible','imageToUpload', 'notes'];
+  const requiredFields = ['title', 'visible', 'imageToUpload', 'notes'];
   requiredFields.forEach(field => {
     if (!values[field] || values[field].length === 0) {
       errors[field] = 'Required';
@@ -42,7 +22,12 @@ const validate = (values: any) => {
   return errors;
 };
 
-const renderTextField: React.FC<any> = ({ label, input, meta: { touched, invalid, error }, ...custom }) => (
+const renderTextField: React.FC<any> = ({
+  label,
+  input,
+  meta: { touched, invalid, error },
+  ...custom
+}) => (
   <TextField
     fullWidth
     label={label}
@@ -56,9 +41,17 @@ const renderTextField: React.FC<any> = ({ label, input, meta: { touched, invalid
   />
 );
 
-const renderSelectField: React.FC<any> = ({ input, label, meta: { touched, error }, children, ...custom }) => (
+const renderSelectField: React.FC<any> = ({
+  input,
+  label,
+  meta: { touched, error },
+  children,
+  ...custom
+}) => (
   <FormControl error={touched && error}>
-    <InputLabel htmlFor="visible" shrink={true}>Visible</InputLabel>
+    <InputLabel htmlFor="visible" shrink={true}>
+      Visible
+    </InputLabel>
     <Select
       native
       {...input}
@@ -70,41 +63,52 @@ const renderSelectField: React.FC<any> = ({ input, label, meta: { touched, error
     >
       {children}
     </Select>
-    {/* {renderFromHelper({ touched, error })} */}
   </FormControl>
 );
 
-const MaterialUiForm = (props: any) => {
+const PostForm = (props: any) => {
   const { handleSubmit, pristine, reset, submitting, invalid } = props;
   const [resetStatue, resetTriger] = React.useState(false);
-  const classes = useStyles();
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <Box>
         <Field name="title" component={renderTextField} label="Title" />
-      </div>
-      <div className={classes.field}>
+      </Box>
+      <Box mt={'20px'}>
         <Field name="visible" component={renderSelectField} label="Visible">
-          <option value="public" defaultChecked>public</option>
+          <option value="public" defaultChecked>
+            public
+          </option>
           <option value="private">private</option>
         </Field>
-      </div>
-      <div>
+      </Box>
+      <Box>
         <Field
           name="imageToUpload"
-          component={Previews}
+          component={ImageUpload}
           type="file"
           value={null}
           reset={resetStatue}
           resetTriger={resetTriger}
         />
-      </div>
-      <div>
-        <Field name="notes" component={renderTextField} label="Notes" multiline rowsMax="4" margin="normal" />
-      </div>
+      </Box>
+      <Box>
+        <Field
+          name="notes"
+          component={renderTextField}
+          label="Notes"
+          multiline
+          rowsMax="4"
+          margin="normal"
+        />
+      </Box>
       <DialogActions>
-        <Button type="submit" disabled={pristine || submitting || invalid} color="primary">
+        <Button
+          type="submit"
+          disabled={pristine || submitting || invalid}
+          color="primary"
+        >
           Submit
         </Button>
         <Button
@@ -124,7 +128,6 @@ const MaterialUiForm = (props: any) => {
 };
 
 export default reduxForm({
-  form: 'MaterialUiForm', // a unique identifier for this form
+  form: 'PostForm', // a unique identifier for this form
   validate,
-  asyncValidate,
-})(MaterialUiForm);
+})(PostForm);

@@ -1,13 +1,13 @@
 import React, { FC, useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
-import { Hub, API, graphqlOperation } from 'aws-amplify';
-import { Authenticator } from 'aws-amplify-react';
+import { Hub } from 'aws-amplify';
 
 import * as AuthActions from '../actions/Auth';
-import * as albumActions from '../actions/AlbumAPI';
+import * as albumActions from '../actions/Album';
 import Album from './Album';
 import Header from './Header';
+import Auth from '../components/03_organisms/Auth';
 
 const mapStateToProps = (state: any): any => ({
   auth: state.auth,
@@ -20,8 +20,6 @@ const mapDispatchToProps = (dispatch: Dispatch): any => {
     albumActions: bindActionCreators(albumActions, dispatch),
   };
 };
-
-// const text = 'text message is ...';
 
 const AppContainer: FC<any> = ({ auth, authActions, albumActions }) => {
   const [triggerFetch, setTriggerFetch] = useState(false);
@@ -56,57 +54,21 @@ const AppContainer: FC<any> = ({ auth, authActions, albumActions }) => {
     };
   }, [triggerFetch]);
 
-  const onCreateAlbumPicture = `subscription onCreateAlbumPictureSub {
-    onCreateAlbumPicture {
-        __typename
-        id
-        albumId
-        name
-        createdAt
-    }
-  }`;
-
-  const onDeleteAlbum = `subscription onDeleteAlbumSub {
-    onDeleteAlbum {
-        __typename
-        id
-    }
-  }`;
-
-  useEffect(() => {
-    const f = async () => {
-      await API.graphql(graphqlOperation(onCreateAlbumPicture)).subscribe({
-        next: async () => {
-            // console.log('eventData: ', eventData);
-            await albumActions.getAlbumListFunc();
-          }
-        });
-      await API.graphql(graphqlOperation(onDeleteAlbum)).subscribe({
-        next: async () => {
-            // console.log('eventData: ', eventData);
-            await albumActions.getAlbumListFunc();
-          }
-        });
-      await albumActions.getAlbumListFunc();
-    };
-    f();
-  }, []);
-
   return (
-    <div>
+    <>
       <Header />
       {!auth.user ? (
-        <Authenticator />
+        <Auth />
       ) : (
         <div>
           <Album />
         </div>
       )}
-    </div>
+    </>
   );
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(AppContainer);
