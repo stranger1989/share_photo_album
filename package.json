@@ -52,11 +52,15 @@
   "devDependencies": {
     "@storybook/addon-a11y": "^5.2.1",
     "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-backgrounds": "^5.2.6",
+    "@storybook/addon-docs": "^5.2.6",
     "@storybook/addon-info": "^5.2.1",
     "@storybook/addon-knobs": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addon-storyshots": "^5.2.1",
     "@storybook/react": "^5.2.1",
+    "@storybook/source-loader": "^5.2.6",
+    "@types/faker": "^4.1.8",
     "@types/lodash": "^4.14.144",
     "@types/react": "^16.9.3",
     "@types/react-redux": "^7.1.4",
@@ -79,6 +83,7 @@
     "eslint-plugin-prefer-arrow": "^1.1.6",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
+    "faker": "^4.1.0",
     "prettier": "^1.18.2",
     "prettier-stylelint": "^0.4.2",
     "react-docgen-typescript-loader": "^3.2.1",
@@ -87,7 +92,8 @@
     "require-context.macro": "^1.2.1",
     "stylelint": "^11.0.0",
     "stylelint-config-prettier": "^6.0.0",
-    "stylelint-config-standard": "^19.0.0"
+    "stylelint-config-standard": "^19.0.0",
+    "testcafe": "^1.7.1"
   },
   "prettier": {
     "bracketSpacing": true,
