@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import * as AlbumAPIActionType from '../../constants/AlbumAPI';
+import * as AlbumAPIActionType from '../../constants/Album';
 
 export interface AlbumApiState {
   albums: any;
@@ -16,7 +16,7 @@ export const initialState: AlbumApiState = {
 
 const apiReducer: Reducer<AlbumApiState> = (
   state: AlbumApiState = initialState,
-  action: any,
+  action: any
 ): AlbumApiState => {
   switch (action.type) {
     case AlbumAPIActionType.LIST_ALBUMS_START:
@@ -50,9 +50,6 @@ const apiReducer: Reducer<AlbumApiState> = (
         error: action.payload.error,
       };
     default: {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      // const _: never = action;
-
       return state;
     }
   }

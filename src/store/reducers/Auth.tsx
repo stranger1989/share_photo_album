@@ -13,7 +13,10 @@ export const initialState = {
   isLoaded: false,
 };
 
-const amplifyAuthReducer: Reducer = (state: AuthState = initialState, action: any) => {
+const amplifyAuthReducer: Reducer = (
+  state: AuthState = initialState,
+  action: any
+) => {
   switch (action.type) {
     case AuthActionType.FETCH_SESSION_START:
       return {
@@ -48,9 +51,6 @@ const amplifyAuthReducer: Reducer = (state: AuthState = initialState, action: an
     case AuthActionType.AUTH_INITIALIZE:
       return { ...state, user: null };
     default: {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      // const _: never = action;
-
       return state;
     }
   }
